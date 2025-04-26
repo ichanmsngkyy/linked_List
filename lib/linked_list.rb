@@ -120,7 +120,7 @@ class LinkedList
   end
 
   def remove_at(index)
-    return false if index.negative || index >= @size
+    return false if index.negative? || index >= @size
 
     if index.zero?
       @head = @head.next_node
@@ -138,14 +138,3 @@ class LinkedList
     true
   end
 end
-
-list = LinkedList.new
-
-list.append('dog')
-list.append('cat')
-list.append('parrot')
-list.append('hamster')
-list.append('snake')
-list.append('turtle')
-
-puts list
